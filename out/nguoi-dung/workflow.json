@@ -1,0 +1,160 @@
+{
+  "id": "nguoi-dung",
+  "name": "Người dùng",
+  "title": "Người dùng",
+  "diagram_title": "Người dùng",
+  "section_number": "4.1.2.3.2",
+  "purpose": "Cho phép quản trị viên tìm kiếm, xem danh sách và thực hiện các thao tác quản lý tài khoản người dùng trong hệ thống.",
+  "actor": "Quản trị viên hệ thống",
+  "preconditions": "Người dùng đã đăng nhập và có quyền truy cập chức năng Quản trị hệ thống > Quản lý người dùng > Người dùng.",
+  "postconditions": "Trường hợp thành công: hệ thống hiển thị danh sách người dùng và cập nhật dữ liệu sau thao tác quản lý. Trường hợp không thành công: hệ thống hiển thị thông báo lỗi tương ứng.",
+  "source_image": "C:\\vipp\\vipp\\docx_common_workflow\\out\\nguoi-dung\\nguoi-dung.png",
+  "lanes": {
+    "user": "Người sử dụng",
+    "system": "Hệ thống"
+  },
+  "nodes": [],
+  "edges": [],
+  "inputs": [
+    {
+      "name": "Tài khoản",
+      "type": "text",
+      "required": false,
+      "validation": "Cho phép nhập một phần hoặc toàn bộ tên tài khoản để tìm kiếm."
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Tìm kiếm",
+      "action": "Lọc danh sách người dùng theo điều kiện đã nhập."
+    },
+    {
+      "label": "Tìm kiếm nâng cao",
+      "action": "Hiển thị thêm các tiêu chí tìm kiếm nâng cao."
+    },
+    {
+      "label": "Import danh sách",
+      "action": "Import danh sách người dùng từ file."
+    },
+    {
+      "label": "Thêm mới",
+      "action": "Mở form tạo mới tài khoản người dùng."
+    },
+    {
+      "label": "Xem",
+      "action": "Xem thông tin chi tiết người dùng."
+    },
+    {
+      "label": "Sửa",
+      "action": "Chỉnh sửa thông tin người dùng."
+    },
+    {
+      "label": "Khóa/Mở khóa",
+      "action": "Thay đổi trạng thái hoạt động của tài khoản."
+    },
+    {
+      "label": "Đổi mật khẩu",
+      "action": "Thực hiện thao tác đổi hoặc đặt lại mật khẩu người dùng."
+    },
+    {
+      "label": "Xóa",
+      "action": "Xóa tài khoản người dùng sau khi xác nhận."
+    }
+  ],
+  "tables": [
+    {
+      "name": "Danh sách người dùng",
+      "columns": [
+        "STT",
+        "Tài khoản",
+        "Họ Tên",
+        "Số điện thoại",
+        "Phòng ban",
+        "Vai trò",
+        "Trạng thái",
+        "Thao tác"
+      ]
+    }
+  ],
+  "basic_flow": [
+    {
+      "actor": "Người dùng mở menu Quản trị hệ thống > Quản lý người dùng > Người dùng.",
+      "system": "Hệ thống hiển thị màn hình tìm kiếm và danh sách người dùng gồm các cột STT, Tài khoản, Họ Tên, Số điện thoại, Phòng ban, Vai trò, Trạng thái và Thao tác.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng nhập tài khoản hoặc mở Tìm kiếm nâng cao để chọn thêm điều kiện.",
+      "system": "Hệ thống lọc và hiển thị danh sách người dùng phù hợp với điều kiện tìm kiếm.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng chọn Import danh sách, Thêm mới hoặc chọn một thao tác tại dòng dữ liệu.",
+      "system": "Hệ thống kiểm tra quyền và mở màn hình xử lý tương ứng với thao tác người dùng chọn.",
+      "crud": "C/R/U/D"
+    },
+    {
+      "actor": "Người dùng hoàn tất nhập thông tin hoặc xác nhận thao tác.",
+      "system": "Hệ thống cập nhật dữ liệu và hiển thị lại danh sách người dùng theo trạng thái mới nhất.",
+      "crud": "C/U/D"
+    }
+  ],
+  "alternative_flow": [
+    {
+      "actor": "1. Người dùng nhập điều kiện tìm kiếm không có dữ liệu phù hợp.",
+      "system": "2. Hệ thống hiển thị danh sách trống hoặc thông báo không có dữ liệu.",
+      "crud": "R"
+    },
+    {
+      "actor": "1. Người dùng nhập thiếu thông tin bắt buộc hoặc thực hiện thao tác không đủ quyền.",
+      "system": "2. Hệ thống hiển thị thông báo lỗi và không cập nhật dữ liệu.",
+      "crud": ""
+    }
+  ],
+  "alternative_flows": [
+    {
+      "name": "Dữ liệu hoặc quyền không hợp lệ",
+      "steps": [
+        {
+          "actor": "5. Người dùng nhập thiếu thông tin bắt buộc hoặc thực hiện thao tác không đủ quyền.",
+          "system": "6.2. Hệ thống hiển thị thông báo lỗi và yêu cầu kiểm tra lại thông tin.",
+          "crud": ""
+        }
+      ]
+    }
+  ],
+  "validation_rules": [
+    "Điều kiện Tài khoản cho phép tìm kiếm theo một phần hoặc toàn bộ tên tài khoản.",
+    "Các thao tác thêm mới, sửa, xóa, khóa/mở khóa và đổi mật khẩu chỉ hiển thị hoặc thực hiện với người dùng có quyền phù hợp.",
+    "Khi thêm mới hoặc chỉnh sửa, các trường bắt buộc của tài khoản phải được nhập đầy đủ.",
+    "Không cho phép tạo tài khoản trùng tên tài khoản đã tồn tại."
+  ],
+  "business_rules": [
+    "Danh sách người dùng hiển thị tổng số bản ghi và hỗ trợ phân trang.",
+    "Trạng thái tài khoản được thể hiện trực quan, ví dụ trạng thái Đang hoạt động.",
+    "Cột Thao tác cho phép xử lý từng người dùng theo quyền của tài khoản đăng nhập.",
+    "Chức năng Import danh sách hỗ trợ thêm nhiều người dùng từ file dữ liệu."
+  ],
+  "api_actions": [],
+  "error_scenarios": [
+    "Hệ thống hiển thị thông báo khi không tìm thấy dữ liệu phù hợp.",
+    "Hệ thống hiển thị thông báo khi dữ liệu nhập không hợp lệ.",
+    "Hệ thống hiển thị thông báo khi thao tác không đủ quyền hoặc không thể cập nhật dữ liệu."
+  ],
+  "diagram_steps": {
+    "full_mapping": true,
+    "step1": "1. Mở màn hình Người dùng",
+    "step2": "2. Hiển thị danh sách người dùng",
+    "step3": "3. Nhập tài khoản / tìm nâng cao",
+    "step4": "4. Lọc danh sách người dùng",
+    "step5": "5. Chọn import / thêm mới / thao tác",
+    "decision": "Hợp lệ?",
+    "no_data": "6.2. Thông báo lỗi",
+    "has_data": "6.1. Xử lý thao tác",
+    "step6": "7. Hoàn tất / xác nhận",
+    "step7": "8. Hiển thị danh sách mới"
+  },
+  "notes": [
+    "Thông tin được suy luận từ ảnh màn hình danh sách Người dùng trong chức năng Quản trị hệ thống.",
+    "Các thao tác chi tiết ở cột Thao tác được mô tả ở mức quản lý chung vì ảnh chỉ thể hiện biểu tượng thao tác."
+  ]
+}

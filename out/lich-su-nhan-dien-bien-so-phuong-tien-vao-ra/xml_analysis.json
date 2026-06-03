@@ -1,0 +1,205 @@
+{
+  "source": "C:\\vipp\\vipp\\docx_common_workflow\\src_common\\xml_common\\xml_common.xml",
+  "root_tag": "mxfile",
+  "root_attributes": {
+    "host": "app.diagrams.net"
+  },
+  "namespaces": {},
+  "element_counts": {
+    "Array": 5,
+    "diagram": 1,
+    "mxCell": 27,
+    "mxGeometry": 25,
+    "mxGraphModel": 1,
+    "mxPoint": 7,
+    "mxfile": 1,
+    "root": 1
+  },
+  "is_drawio": true,
+  "drawio": {
+    "diagram_count": 1,
+    "diagrams": [
+      {
+        "name": "Page-1",
+        "id": "lich-su-nhan-dien-bien-so-phuong-tien-vao-ra"
+      }
+    ],
+    "mx_cells_with_value_or_style": [
+      {
+        "id": "container",
+        "value": "Lịch sử về nhận diện biển số phương tiện vào ra",
+        "style": "swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=26;fontSize=14;fontStyle=1;align=center;html=1;fillColor=#dae8fc;swimlaneFillColor=none;strokeColor=#6c8ebf;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "lane_user",
+        "value": "Người sử dụng",
+        "style": "swimlane;startSize=26;fontSize=12;fontStyle=1;align=center;html=1;fillColor=#fff2cc;swimlaneFillColor=none;strokeColor=#d6b656;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "lane_system",
+        "value": "Hệ thống",
+        "style": "swimlane;startSize=26;fontSize=12;fontStyle=1;align=center;html=1;fillColor=#fff2cc;swimlaneFillColor=none;strokeColor=#d6b656;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_start",
+        "value": "Bắt đầu",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;strokeWidth=2;shape=mxgraph.flowchart.terminator;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_step1",
+        "value": "1. Mở tab lịch sử biển số",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_step3",
+        "value": "3. Nhập tiêu chí tìm kiếm",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_step4",
+        "value": "4. Nhấn nút Báo cáo",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_step6",
+        "value": "6. Xuất file",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_step2",
+        "value": "2. Hiển thị tiêu chí báo cáo",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_decision",
+        "value": "Có dữ liệu?",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;strokeWidth=1;rhombus;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_no_data",
+        "value": "5.2. Thông báo không có dữ liệu",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_has_data",
+        "value": "5.1. Hiển thị danh sách",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_step7",
+        "value": "7. Tải file",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "node_end",
+        "value": "Kết thúc",
+        "style": "whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;strokeWidth=2;shape=mxgraph.flowchart.terminator;fillColor=#ffffff;",
+        "vertex": "1",
+        "edge": ""
+      },
+      {
+        "id": "edge_start_step1",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_step1_step2",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_step2_step3",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_step3_step4",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_step4_decision",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_decision_no_data",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_decision_has_data",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_no_data_end",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_has_data_step6",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_step6_step7",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      },
+      {
+        "id": "edge_step7_end",
+        "value": "",
+        "style": "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;",
+        "vertex": "",
+        "edge": "1"
+      }
+    ]
+  }
+}

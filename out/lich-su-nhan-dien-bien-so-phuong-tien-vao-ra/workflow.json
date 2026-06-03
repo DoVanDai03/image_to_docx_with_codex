@@ -1,0 +1,237 @@
+{
+  "id": "lich-su-nhan-dien-bien-so-phuong-tien-vao-ra",
+  "name": "Lịch sử về nhận diện biển số phương tiện vào ra",
+  "title": "Lịch sử về nhận diện biển số phương tiện vào ra",
+  "diagram_title": "Lịch sử về nhận diện biển số phương tiện vào ra",
+  "section_number": "4.1.2.3.2",
+  "purpose": "Cho phép người dùng tra cứu, tổng hợp và xuất dữ liệu lịch sử nhận diện biển số phương tiện ra vào theo các tiêu chí báo cáo.",
+  "actor": "Người dùng hệ thống",
+  "preconditions": "Người dùng đã đăng nhập và có quyền truy cập chức năng.",
+  "postconditions": "Trường hợp thành công: hệ thống hiển thị danh sách lịch sử nhận diện biển số phương tiện ra vào phù hợp tiêu chí và cho phép xuất PDF/Excel. Trường hợp không thành công: hệ thống hiển thị thông báo tương ứng.",
+  "source_image": "",
+  "lanes": {
+    "user": "Người dùng",
+    "system": "Hệ thống"
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "shape": "oval",
+      "label": "Bắt đầu",
+      "lane": "user"
+    },
+    {
+      "id": "step1",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "1. Mở tab Lịch sử về nhận diện biển số phương tiện ra vào",
+      "lane": "user"
+    },
+    {
+      "id": "step2",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "2. Hiển thị màn hình tiêu chí báo cáo",
+      "lane": "system"
+    },
+    {
+      "id": "step3",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "3. Nhập hoặc chọn tiêu chí và nhấn Báo cáo",
+      "lane": "user"
+    },
+    {
+      "id": "step4",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "4. Hiển thị danh sách lịch sử nhận diện biển số",
+      "lane": "system"
+    },
+    {
+      "id": "step5",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "5. Chọn Xuất file pdf hoặc Xuất file Excel",
+      "lane": "user"
+    },
+    {
+      "id": "step6",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "6. Xuất dữ liệu báo cáo theo định dạng đã chọn",
+      "lane": "system"
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "shape": "oval",
+      "label": "Kết thúc",
+      "lane": "system"
+    }
+  ],
+  "edges": [
+    {
+      "from": "start",
+      "to": "step1"
+    },
+    {
+      "from": "step1",
+      "to": "step2"
+    },
+    {
+      "from": "step2",
+      "to": "step3"
+    },
+    {
+      "from": "step3",
+      "to": "step4"
+    },
+    {
+      "from": "step4",
+      "to": "step5"
+    },
+    {
+      "from": "step5",
+      "to": "step6"
+    },
+    {
+      "from": "step6",
+      "to": "end"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "Thời gian từ - Thời gian đến",
+      "type": "datetime_range",
+      "required": true,
+      "validation": "Khoảng thời gian phải hợp lệ."
+    },
+    {
+      "name": "Camera",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn một camera hoặc Tất cả."
+    },
+    {
+      "name": "Hãng xe",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn một hãng xe hoặc Tất cả."
+    },
+    {
+      "name": "Chủ phương tiện",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn một chủ phương tiện hoặc Tất cả."
+    },
+    {
+      "name": "Kiểu dáng",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn một kiểu dáng hoặc Tất cả."
+    },
+    {
+      "name": "Loại xe",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn một loại xe hoặc Tất cả."
+    },
+    {
+      "name": "Màu biển số xe",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn một màu biển số hoặc Tất cả."
+    },
+    {
+      "name": "Tên biển số xe",
+      "type": "text",
+      "required": false,
+      "validation": "Nhập đúng định dạng biển số xe cần tra cứu."
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Báo cáo",
+      "action": "Tra cứu danh sách lịch sử nhận diện biển số phương tiện ra vào theo tiêu chí."
+    },
+    {
+      "label": "Xuất file pdf",
+      "action": "Xuất kết quả báo cáo dạng PDF."
+    },
+    {
+      "label": "Xuất file Excel",
+      "action": "Xuất kết quả báo cáo dạng Excel."
+    }
+  ],
+  "tables": [
+    {
+      "name": "Danh sách Lịch sử về nhận diện biển số phương tiện vào ra",
+      "columns": [
+        "STT",
+        "Camera",
+        "Thời gian",
+        "Kiểu dáng",
+        "Loại xe",
+        "Hãng xe",
+        "Chủ phương tiện",
+        "Biển số xe",
+        "Hình biển số",
+        "Hình ảnh"
+      ]
+    }
+  ],
+  "basic_flow": [
+    {
+      "actor": "Người dùng mở tab Lịch sử về nhận diện biển số phương tiện ra vào trong màn hình báo cáo tổng hợp dữ liệu an ninh an toàn.",
+      "system": "Hệ thống hiển thị khu vực tiêu chí báo cáo gồm thời gian, camera, hãng xe, chủ phương tiện, kiểu dáng, loại xe, màu biển số xe và tên biển số xe.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng nhập hoặc chọn tiêu chí báo cáo và nhấn Báo cáo.",
+      "system": "Hệ thống kiểm tra tiêu chí và hiển thị danh sách Lịch sử về nhận diện biển số phương tiện vào ra phù hợp.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng xem thông tin trong bảng kết quả.",
+      "system": "Hệ thống hiển thị các cột STT, Camera, Thời gian, Kiểu dáng, Loại xe, Hãng xe, Chủ phương tiện, Biển số xe, Hình biển số và Hình ảnh.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng chọn Xuất file pdf hoặc Xuất file Excel.",
+      "system": "Hệ thống xuất dữ liệu báo cáo theo định dạng người dùng đã chọn.",
+      "crud": "R"
+    }
+  ],
+  "alternative_flow": [
+    {
+      "actor": "1. Người dùng nhập khoảng thời gian hoặc tiêu chí báo cáo không hợp lệ.",
+      "system": "2. Hệ thống hiển thị cảnh báo và yêu cầu kiểm tra lại tiêu chí báo cáo.",
+      "crud": ""
+    },
+    {
+      "actor": "1. Người dùng nhấn Báo cáo nhưng không có dữ liệu phù hợp.",
+      "system": "2. Hệ thống hiển thị danh sách rỗng hoặc thông báo không có dữ liệu.",
+      "crud": "R"
+    }
+  ],
+  "alternative_flows": [],
+  "validation_rules": [
+    "Khoảng thời gian từ - đến phải hợp lệ.",
+    "Các tiêu chí dạng danh mục cho phép chọn giá trị cụ thể hoặc Tất cả.",
+    "Tên biển số xe được nhập theo định dạng biển số xe cần tra cứu."
+  ],
+  "business_rules": [
+    "Danh sách kết quả chỉ hiển thị dữ liệu thuộc phạm vi quyền truy cập của người dùng.",
+    "Chức năng xuất file sử dụng cùng bộ tiêu chí đang áp dụng trên báo cáo."
+  ],
+  "api_actions": [],
+  "error_scenarios": [
+    "Hệ thống hiển thị thông báo tương ứng khi dữ liệu không hợp lệ.",
+    "Hệ thống thông báo lỗi khi quá trình xuất file không thành công."
+  ],
+  "notes": [
+    "Thông tin được suy luận từ ảnh màn hình tab Lịch sử về nhận diện biển số phương tiện ra vào."
+  ]
+}

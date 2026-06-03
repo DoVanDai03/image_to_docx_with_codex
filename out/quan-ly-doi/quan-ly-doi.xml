@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="quan-ly-doi">
+    <mxGraphModel dx="1114" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="container" parent="1" value="Quản lý đội" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=26;fontSize=14;fontStyle=1;align=center;html=1;fillColor=#dae8fc;swimlaneFillColor=none;strokeColor=#6c8ebf;" vertex="1">
+          <mxGeometry x="10" y="10" width="800" height="980" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_user" parent="container" value="Người sử dụng" style="swimlane;startSize=26;fontSize=12;fontStyle=1;align=center;html=1;fillColor=#fff2cc;swimlaneFillColor=none;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry x="0" y="26" width="400" height="954" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_system" parent="container" value="Hệ thống" style="swimlane;startSize=26;fontSize=12;fontStyle=1;align=center;html=1;fillColor=#fff2cc;swimlaneFillColor=none;strokeColor=#d6b656;" vertex="1">
+          <mxGeometry x="400" y="26" width="400" height="954" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_start" parent="lane_user" value="Bắt đầu" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;strokeWidth=2;shape=mxgraph.flowchart.terminator;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="115" y="55" width="105" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step1" parent="lane_user" value="1. Mở màn hình Quản lý đội" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="55" y="145" width="230" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step3" parent="lane_user" value="3. Chọn Thêm mới / Sửa / Xóa" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="55" y="295" width="230" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step5" parent="lane_user" value="5. Nhập hoặc xác nhận thông tin" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="55" y="435" width="230" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step6" parent="lane_user" value="7. Quay lại danh sách" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="85" y="670" width="230" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step2" parent="lane_system" value="2. Hiển thị danh sách đội" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="55" y="170" width="240" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step4" parent="lane_system" value="4. Mở form / xác nhận thao tác" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="55" y="295" width="240" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_decision" parent="lane_system" value="Hợp lệ?" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;strokeWidth=1;rhombus;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="140" y="465" width="115" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_no_data" parent="lane_system" value="6.2. Thông báo lỗi" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="25" y="615" width="175" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_has_data" parent="lane_system" value="6.1. Lưu dữ liệu" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="220" y="615" width="165" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_step7" parent="lane_system" value="8. Hiển thị danh sách mới" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;rounded=0;strokeWidth=1;spacing=6;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="85" y="760" width="230" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="node_end" parent="lane_system" value="Kết thúc" style="whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;strokeWidth=2;shape=mxgraph.flowchart.terminator;fillColor=#ffffff;" vertex="1">
+          <mxGeometry x="148" y="875" width="105" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_start_step1" edge="1" parent="lane_user" source="node_start" target="node_step1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_step1_step2" edge="1" parent="container" source="node_step1" target="node_step2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_step2_step3" edge="1" parent="container" source="node_step2" target="node_step3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="575" y="285"/>
+              <mxPoint x="170" y="285"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_step3_step4" edge="1" parent="container" source="node_step3" target="node_step4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_step4_step5" edge="1" parent="container" source="node_step4" target="node_step5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="575" y="420"/>
+              <mxPoint x="170" y="420"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_step5_decision" edge="1" parent="container" source="node_step5" target="node_decision" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="489"/>
+              <mxPoint x="410" y="536"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_decision_no_data" edge="1" parent="lane_system" source="node_decision" target="node_no_data" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_decision_has_data" edge="1" parent="lane_system" source="node_decision" target="node_has_data" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_no_data_end" edge="1" parent="lane_system" source="node_no_data" target="node_end" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="112" y="690"/>
+              <mxPoint x="390" y="690"/>
+              <mxPoint x="390" y="900"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_has_data_step6" edge="1" parent="container" source="node_has_data" target="node_step6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="703" y="724"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_step6_step7" edge="1" parent="container" source="node_step6" target="node_step7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="814"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_step7_end" edge="1" parent="lane_system" source="node_step7" target="node_end" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;fontSize=11;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

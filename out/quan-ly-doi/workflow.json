@@ -1,0 +1,282 @@
+{
+  "id": "quan-ly-doi",
+  "name": "Quản lý đội",
+  "title": "Quản lý đội",
+  "diagram_title": "Quản lý đội",
+  "section_number": "4.1.2.3.2",
+  "purpose": "Cho phép người dùng xem danh sách đội và thực hiện thêm mới, chỉnh sửa, xóa đội trong danh mục hệ thống.",
+  "actor": "Người quản trị hệ thống",
+  "preconditions": "Người dùng đã đăng nhập và có quyền truy cập chức năng Quản trị hệ thống > Danh mục > Quản lý đội.",
+  "postconditions": "Trường hợp thành công: hệ thống hiển thị danh sách đội và cập nhật dữ liệu sau khi người dùng thêm, sửa hoặc xóa. Trường hợp không thành công: hệ thống hiển thị thông báo lỗi tương ứng.",
+  "source_image": "C:\\vipp\\vipp\\docx_common_workflow\\out\\quan-ly-doi\\quan-ly-doi.png",
+  "lanes": {
+    "user": "Người sử dụng",
+    "system": "Hệ thống"
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "shape": "oval",
+      "label": "Bắt đầu",
+      "lane": "user"
+    },
+    {
+      "id": "step1",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "1. Vào Quản lý đội",
+      "lane": "user"
+    },
+    {
+      "id": "step2",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "2. Hiển thị danh sách đội",
+      "lane": "system"
+    },
+    {
+      "id": "step3",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "3. Chọn Thêm mới / Sửa / Xóa",
+      "lane": "user"
+    },
+    {
+      "id": "step4",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "4. Nhập hoặc xác nhận thông tin",
+      "lane": "user"
+    },
+    {
+      "id": "step5",
+      "type": "decision",
+      "shape": "diamond",
+      "label": "Hợp lệ?",
+      "lane": "system"
+    },
+    {
+      "id": "step5_1",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "5.1. Lưu dữ liệu",
+      "lane": "system"
+    },
+    {
+      "id": "step5_2",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "5.2. Thông báo lỗi",
+      "lane": "system"
+    },
+    {
+      "id": "step6",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "6. Quay lại danh sách",
+      "lane": "user"
+    },
+    {
+      "id": "step7",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "7. Hiển thị danh sách mới",
+      "lane": "system"
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "shape": "oval",
+      "label": "Kết thúc",
+      "lane": "system"
+    }
+  ],
+  "edges": [
+    {
+      "from": "start",
+      "to": "step1"
+    },
+    {
+      "from": "step1",
+      "to": "step2"
+    },
+    {
+      "from": "step2",
+      "to": "step3"
+    },
+    {
+      "from": "step3",
+      "to": "step4"
+    },
+    {
+      "from": "step4",
+      "to": "step5"
+    },
+    {
+      "from": "step5",
+      "to": "step5_1",
+      "label": "Có"
+    },
+    {
+      "from": "step5",
+      "to": "step5_2",
+      "label": "Không"
+    },
+    {
+      "from": "step5_1",
+      "to": "step6"
+    },
+    {
+      "from": "step6",
+      "to": "step7"
+    },
+    {
+      "from": "step7",
+      "to": "end"
+    },
+    {
+      "from": "step5_2",
+      "to": "end"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "Mã đội",
+      "type": "text",
+      "required": true,
+      "validation": "Không được để trống và không trùng với mã đội đã tồn tại."
+    },
+    {
+      "name": "Tên đội",
+      "type": "text",
+      "required": true,
+      "validation": "Không được để trống."
+    },
+    {
+      "name": "Loại đội",
+      "type": "select",
+      "required": true,
+      "validation": "Chọn loại đội hợp lệ."
+    },
+    {
+      "name": "Phòng ban",
+      "type": "select",
+      "required": false,
+      "validation": "Chọn phòng ban nếu có."
+    },
+    {
+      "name": "Mô tả",
+      "type": "textarea",
+      "required": false,
+      "validation": "Nhập mô tả phù hợp."
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Thêm mới",
+      "action": "Mở form thêm mới đội."
+    },
+    {
+      "label": "Sửa",
+      "action": "Mở form chỉnh sửa thông tin đội."
+    },
+    {
+      "label": "Xóa",
+      "action": "Xóa đội sau khi người dùng xác nhận."
+    }
+  ],
+  "tables": [
+    {
+      "name": "Danh sách đội",
+      "columns": [
+        "STT",
+        "Mã đội",
+        "Tên đội",
+        "Loại đội",
+        "Phòng ban",
+        "Số lượng thành viên",
+        "Mô tả",
+        "Thao tác"
+      ]
+    }
+  ],
+  "basic_flow": [
+    {
+      "actor": "Người dùng mở menu Quản trị hệ thống > Danh mục > Quản lý đội.",
+      "system": "Hệ thống hiển thị danh sách đội gồm các cột STT, Mã đội, Tên đội, Loại đội, Phòng ban, Số lượng thành viên, Mô tả và Thao tác.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng nhấn Thêm mới hoặc chọn Sửa/Xóa tại một dòng dữ liệu.",
+      "system": "Hệ thống mở form nhập thông tin hoặc hiển thị xác nhận theo thao tác người dùng chọn.",
+      "crud": "C/U/D"
+    },
+    {
+      "actor": "Người dùng nhập thông tin hoặc xác nhận thao tác.",
+      "system": "Hệ thống kiểm tra dữ liệu và thực hiện thêm mới, cập nhật hoặc xóa đội.",
+      "crud": "C/U/D"
+    },
+    {
+      "actor": "Người dùng quay lại danh sách đội.",
+      "system": "Hệ thống hiển thị danh sách đội đã được cập nhật và hỗ trợ phân trang.",
+      "crud": "R"
+    }
+  ],
+  "alternative_flow": [
+    {
+      "actor": "1. Người dùng nhập thiếu thông tin bắt buộc hoặc nhập mã đội đã tồn tại.",
+      "system": "2. Hệ thống hiển thị cảnh báo và yêu cầu kiểm tra lại thông tin.",
+      "crud": ""
+    },
+    {
+      "actor": "1. Người dùng thực hiện xóa đội không đủ điều kiện xóa.",
+      "system": "2. Hệ thống hiển thị thông báo lỗi và giữ nguyên dữ liệu hiện tại.",
+      "crud": "D"
+    }
+  ],
+  "alternative_flows": [
+    {
+      "name": "Dữ liệu không hợp lệ",
+      "steps": [
+        {
+          "actor": "5. Người dùng nhập thiếu thông tin bắt buộc hoặc nhập mã đội đã tồn tại.",
+          "system": "6.2. Hệ thống hiển thị cảnh báo và yêu cầu kiểm tra lại thông tin.",
+          "crud": ""
+        }
+      ]
+    }
+  ],
+  "validation_rules": [
+    "Mã đội và Tên đội là thông tin bắt buộc khi thêm mới hoặc chỉnh sửa.",
+    "Mã đội không được trùng với mã đội đã tồn tại.",
+    "Loại đội phải là giá trị hợp lệ trong danh mục.",
+    "Chỉ người dùng có quyền quản trị mới được thêm mới, sửa hoặc xóa đội."
+  ],
+  "business_rules": [
+    "Danh sách đội hiển thị tổng số bản ghi và hỗ trợ phân trang.",
+    "Cột Thao tác cho phép chỉnh sửa hoặc xóa từng đội.",
+    "Không cho phép xóa đội nếu việc xóa ảnh hưởng đến dữ liệu liên quan."
+  ],
+  "api_actions": [],
+  "error_scenarios": [
+    "Hệ thống hiển thị thông báo khi dữ liệu nhập không hợp lệ.",
+    "Hệ thống hiển thị thông báo khi thao tác lưu hoặc xóa không thành công."
+  ],
+  "diagram_steps": {
+    "full_mapping": true,
+    "step1": "1. Mở màn hình Quản lý đội",
+    "step2": "2. Hiển thị danh sách đội",
+    "step3": "3. Chọn Thêm mới / Sửa / Xóa",
+    "step4": "4. Mở form / xác nhận thao tác",
+    "step5": "5. Nhập hoặc xác nhận thông tin",
+    "decision": "Hợp lệ?",
+    "no_data": "6.2. Thông báo lỗi",
+    "has_data": "6.1. Lưu dữ liệu",
+    "step6": "7. Quay lại danh sách",
+    "step7": "8. Hiển thị danh sách mới"
+  },
+  "notes": [
+    "Thông tin được suy luận từ ảnh màn hình Danh sách đội trong chức năng Quản lý đội."
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "docx_common_template",
+  "description": "Schema đầy đủ cho file template docx_common.docx. Dùng làm reference phụ khi debug format; source of truth chính vẫn là XML thực tế trong src_common/docx_common/docx_common.docx.",
+  "version": "1.0.0",
+  "source_file": "docx_common.docx",
+  "page": {
+    "size": {
+      "width_dxa": 12240,
+      "height_dxa": 15840,
+      "width_inch": 8.5,
+      "height_inch": 11,
+      "preset": "US_LETTER"
+    },
+    "margin": {
+      "top_dxa": 1440,
+      "bottom_dxa": 1440,
+      "left_dxa": 1440,
+      "right_dxa": 1440,
+      "unit_inch": 1.0,
+      "header_dxa": 720,
+      "footer_dxa": 720
+    },
+    "orientation": "portrait"
+  },
+  "document_defaults": {
+    "font": {
+      "latin": "minorHAnsi",
+      "latin_resolved": "Calibri",
+      "east_asia": null,
+      "complex_script": null
+    },
+    "font_size": {
+      "half_points": 22,
+      "pt": 11
+    },
+    "language": {
+      "latin": "en-US",
+      "east_asia": null,
+      "bidi": null
+    },
+    "paragraph_spacing": {
+      "before_twips": 0,
+      "after_twips": 160,
+      "after_pt": 8,
+      "line": 259,
+      "line_rule": "auto",
+      "line_multiplier": 1.15
+    }
+  },
+  "fonts": {
+    "body": {
+      "name": "Yu Mincho",
+      "type": "East Asia / CJK",
+      "usage": [
+        "table_cell_left",
+        "table_cell_right",
+        "list",
+        "caption",
+        "body_paragraph"
+      ],
+      "language": "vi-VN"
+    },
+    "heading": {
+      "name": "Yu Gothic Light",
+      "type": "East Asia / CJK",
+      "usage": [
+        "outline_heading_level4",
+        "outline_heading_level5"
+      ],
+      "language_latin": "pt-BR",
+      "language_east_asia": "ja-JP"
+    },
+    "list_bullet": {
+      "name": "Symbol",
+      "usage": [
+        "list_numId1_bullet_character"
+      ]
+    },
+    "list_dash": {
+      "name": "Times New Roman",
+      "usage": [
+        "list_numId2_dash_character"
+      ]
+    }
+  },
+  "text_styles": {
+    "common_size": {
+      "half_points": 24,
+      "pt": 12,
+      "applies_to": "ALL elements in document"
+    },
+    "color": {
+      "default": "auto",
+      "hex": "000000"
+    },
+    "heading_run": {
+      "font": "Yu Gothic Light",
+      "size_hp": 24,
+      "size_pt": 12,
+      "italic": true,
+      "italic_cs": true,
+      "bold": false,
+      "underline": {
+        "number_part": false,
+        "title_part": true,
+        "style": "single"
+      }
+    },
+    "body_run": {
+      "font": "Yu Mincho",
+      "size_hp": 24,
+      "size_pt": 12,
+      "bold": false,
+      "italic": false
+    },
+    "label_run": {
+      "font": "Yu Mincho",
+      "size_hp": 24,
+      "size_pt": 12,
+      "bold": true,
+      "italic": false
+    },
+    "caption_run": {
+      "font": "Yu Mincho",
+      "size_hp": 24,
+      "size_pt": 12,
+      "italic": true,
+      "italic_cs": true,
+      "bold": false
+    },
+    "cross_reference_run": {
+      "font": "Yu Mincho",
+      "size_hp": 24,
+      "size_pt": 12,
+      "bold": true,
+      "italic": true
+    }
+  },
+  "paragraph_spacing": {
+    "heading": {
+      "before_twips": 40,
+      "before_pt": 2,
+      "after_twips": 160,
+      "after_pt": 8,
+      "line": 259,
+      "line_rule": "auto",
+      "line_multiplier": 1.15,
+      "keep_next": true,
+      "keep_lines": true
+    },
+    "body_in_table1": {
+      "before_twips": 0,
+      "after_twips": 160,
+      "after_pt": 8,
+      "line": null,
+      "line_rule": null
+    },
+    "body_in_table2": {
+      "before_twips": 0,
+      "after_twips": 0,
+      "line": null,
+      "line_rule": null
+    },
+    "caption": {
+      "before_twips": 0,
+      "after_twips": 200,
+      "after_pt": 10,
+      "line": 240,
+      "line_rule": "auto",
+      "line_multiplier": 1.0
+    },
+    "list": {
+      "before_twips": 0,
+      "after_twips": 160,
+      "after_pt": 8,
+      "line": 259,
+      "line_rule": "auto",
+      "line_multiplier": 1.15
+    }
+  },
+  "headings": {
+    "level4": {
+      "outline_level": 4,
+      "word_heading_equivalent": "Heading 5",
+      "xml_attr": "outlineLvl=4",
+      "example_number": "4.1.2.3.2.",
+      "paragraph": {
+        "alignment": "left",
+        "indent_left_dxa": 0,
+        "keep_next": true,
+        "keep_lines": true,
+        "spacing": "heading"
+      },
+      "runs": [
+        {
+          "part": "number",
+          "example": "4.1.2.3.2. ",
+          "italic": true,
+          "underline": false
+        },
+        {
+          "part": "title",
+          "example": "Xem danh sách quy hoạch ban hành",
+          "italic": true,
+          "underline": true,
+          "underline_style": "single"
+        }
+      ]
+    },
+    "level5": {
+      "outline_level": 5,
+      "word_heading_equivalent": "Heading 6",
+      "xml_attr": "outlineLvl=5",
+      "example_number": "4.1.2.3.2.1.",
+      "paragraph": {
+        "alignment": "left",
+        "indent_left_dxa": 0,
+        "keep_next": true,
+        "keep_lines": true,
+        "spacing": "heading"
+      },
+      "runs": [
+        {
+          "part": "number",
+          "italic": true,
+          "underline": false
+        },
+        {
+          "part": "title",
+          "italic": true,
+          "underline": true,
+          "underline_style": "single"
+        }
+      ]
+    }
+  },
+  "tables": {
+    "table_info": {
+      "id": "table_info",
+      "type": "2_column_info",
+      "purpose": "Thông tin chung chức năng",
+      "layout": {
+        "alignment": "center",
+        "width": {
+          "value": 4855,
+          "type": "pct",
+          "percent": 48.55
+        },
+        "columns": [
+          {
+            "index": 0,
+            "role": "label",
+            "width_pct_value": 1590,
+            "width_percent": 15.9
+          },
+          {
+            "index": 1,
+            "role": "value",
+            "width_pct_value": 3410,
+            "width_percent": 34.1
+          }
+        ]
+      },
+      "borders": {
+        "outer": {
+          "style": "single",
+          "size": 18,
+          "color": "808080"
+        },
+        "inner_h": {
+          "style": "single",
+          "size": 4,
+          "color": "808080"
+        },
+        "inner_v": {
+          "style": "none"
+        },
+        "mid_separator": {
+          "style": "single",
+          "size": 8,
+          "color": "808080"
+        }
+      },
+      "cell_label": {
+        "shading": {
+          "fill": "F3F3F3",
+          "type": "clear"
+        },
+        "vertical_align": "center",
+        "paragraph": {
+          "alignment": "both",
+          "indent_left_dxa": 142,
+          "spacing": "body_in_table1"
+        },
+        "run": {
+          "font": "Yu Mincho",
+          "size_pt": 12,
+          "bold": true,
+          "language": "vi-VN"
+        }
+      },
+      "cell_value": {
+        "shading": {
+          "fill": null
+        },
+        "vertical_align": "center",
+        "paragraph": {
+          "alignment": "both",
+          "indent_left_dxa": 0,
+          "spacing": "body_in_table1"
+        },
+        "run": {
+          "font": "Yu Mincho",
+          "size_pt": 12,
+          "bold": false,
+          "language": "vi-VN"
+        }
+      },
+      "row_heights_dxa": {
+        "row1_ten_chuc_nang": 284,
+        "row2_mo_ta": 284,
+        "row3_tac_nhan": 395,
+        "row4_dieu_kien_truoc": 378,
+        "row5_dieu_kien_sau": 242,
+        "row6_ngoai_le": 284,
+        "row7_yeu_cau_dac_biet": 284
+      },
+      "standard_rows": [
+        "Tên chức năng",
+        "Mô tả",
+        "Tác nhân",
+        "Điều kiện trước",
+        "Điều kiện sau",
+        "Ngoại lệ",
+        "Các yêu cầu đặc biệt"
+      ]
+    },
+    "table_flow": {
+      "id": "table_flow",
+      "type": "3_column_event_flow",
+      "purpose": "Mô tả dòng sự kiện chính / phụ",
+      "layout": {
+        "width": {
+          "value": 9279,
+          "type": "dxa",
+          "inch": 6.44
+        },
+        "indent": {
+          "value": -34,
+          "type": "dxa"
+        },
+        "columns": [
+          {
+            "index": 0,
+            "header": "Hành động của tác nhân",
+            "width_dxa": 2572,
+            "width_inch": 1.78,
+            "content_alignment": "both"
+          },
+          {
+            "index": 1,
+            "header": "Phản ứng của hệ thống",
+            "width_dxa": 4950,
+            "width_inch": 3.44,
+            "content_alignment": "both"
+          },
+          {
+            "index": 2,
+            "header": "Dữ liệu liên quan (C/R/U/D)",
+            "width_dxa": 1757,
+            "width_inch": 1.22,
+            "content_alignment": "center"
+          }
+        ]
+      },
+      "borders": {
+        "all": {
+          "style": "dotted",
+          "size": 4,
+          "color": "auto"
+        },
+        "applies_to": [
+          "top",
+          "bottom",
+          "left",
+          "right",
+          "insideH",
+          "insideV"
+        ]
+      },
+      "row_header": {
+        "is_table_header": true,
+        "height_dxa": 530,
+        "height_rule": "exact",
+        "shading": {
+          "fill": "F5F5F5",
+          "original_xml": "pct5"
+        },
+        "paragraph": {
+          "alignment": "center",
+          "indent_left_dxa": 0,
+          "spacing": "body_in_table1"
+        },
+        "run": {
+          "font": "Yu Mincho",
+          "size_pt": 12,
+          "bold": true
+        }
+      },
+      "row_content": {
+        "paragraph": {
+          "alignment_col0": "both",
+          "alignment_col1": "both",
+          "alignment_col2": "center",
+          "indent_left_dxa": 0,
+          "spacing": "body_in_table2"
+        },
+        "run": {
+          "font": "Yu Mincho",
+          "size_pt": 12,
+          "bold": false
+        }
+      },
+      "row_footer": {
+        "shading": {
+          "fill": "EBEBEB",
+          "original_xml": "pct10"
+        },
+        "content": "empty"
+      }
+    }
+  },
+  "lists": {
+    "list_symbol": {
+      "num_id": 1,
+      "abstract_num_id": 0,
+      "reference_key": "list-symbol",
+      "level": 0,
+      "format": "bullet",
+      "bullet_char": "·",
+      "bullet_font": "Symbol",
+      "alignment": "left",
+      "indent": {
+        "left_dxa": 720,
+        "hanging_dxa": 360
+      },
+      "paragraph_spacing": "list",
+      "paragraph_alignment": "both"
+    },
+    "list_dash": {
+      "num_id": 2,
+      "abstract_num_id": 1,
+      "reference_key": "list-dash",
+      "level": 0,
+      "format": "bullet",
+      "bullet_char": "-",
+      "bullet_font": "Times New Roman",
+      "bullet_color": "auto",
+      "alignment": "left",
+      "indent": {
+        "left_dxa": 360,
+        "hanging_dxa": 360
+      },
+      "start": 5,
+      "paragraph_spacing": "list",
+      "paragraph_alignment": "both"
+    }
+  },
+  "image": {
+    "type": "inline_drawing",
+    "size_emu": {
+      "cx": 5943600,
+      "cy": 8592584,
+      "cx_cm": 6.55,
+      "cy_cm": 9.47
+    },
+    "paragraph": {
+      "alignment": "center",
+      "spacing": "caption"
+    }
+  },
+  "caption": {
+    "paragraph": {
+      "alignment": "center",
+      "indent_left_dxa": 0,
+      "spacing": "caption"
+    },
+    "run": {
+      "font": "Yu Mincho",
+      "size_pt": 12,
+      "italic": true,
+      "italic_cs": true
+    },
+    "pattern": "Hình {n}: {mô tả}"
+  },
+  "document_structure": {
+    "sequence": [
+      "heading_level4",
+      "heading_level5_info",
+      "table_info",
+      "heading_level5_diagram",
+      "image",
+      "caption",
+      "heading_level5_basic_flow",
+      "table_flow_basic",
+      "heading_level5_alternative_flow",
+      "table_flow_alternative",
+      "heading_level5_notes"
+    ]
+  },
+  "units_reference": {
+    "DXA": "Twips. 1 inch = 1440 DXA. 1pt = 20 DXA.",
+    "half_points": "12pt = 24 half-points.",
+    "EMU": "1 inch = 914400 EMU. 1 cm = 360000 EMU.",
+    "pct": "Percentage x 50. 4855 pct = 48.55%."
+  }
+}

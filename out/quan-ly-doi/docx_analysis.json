@@ -1,0 +1,284 @@
+{
+  "source": "C:\\vipp\\vipp\\docx_common_workflow\\src_common\\docx_common\\docx_common.docx",
+  "paragraph_count": 11,
+  "non_empty_paragraphs": [
+    {
+      "index": 0,
+      "text": "Sửa dữ liệu Tuyến đường bộ",
+      "style": "Heading 6",
+      "runs": 11
+    },
+    {
+      "index": 1,
+      "text": "4.4.2.1.1.1.1. Thông tin chung chức năng",
+      "style": "Heading 7",
+      "runs": 8
+    },
+    {
+      "index": 2,
+      "text": "4.4.2.1.1.1.2. Biểu đồ luồng xử lý chức năng",
+      "style": "Heading 7",
+      "runs": 14
+    },
+    {
+      "index": 4,
+      "text": "4.4.2.1.1.1.3. Mô tả dòng sự kiện chính (Basic Flow)",
+      "style": "Heading 7",
+      "runs": 13
+    },
+    {
+      "index": 5,
+      "text": "Mô tả dòng sự kiện phụ (Alternative Flow)",
+      "style": "Heading 7",
+      "runs": 12
+    },
+    {
+      "index": 6,
+      "text": "4.4.2.1.1.1.5. Ghi chú",
+      "style": "Heading 7",
+      "runs": 4
+    },
+    {
+      "index": 7,
+      "text": "- Ràng buộc dữ liệu Tuyến đường bộ:",
+      "style": "Normal",
+      "runs": 15
+    },
+    {
+      "index": 8,
+      "text": "+ Nhập đầy đủ các trường thông tin bắt buộc.",
+      "style": "Normal",
+      "runs": 17
+    },
+    {
+      "index": 9,
+      "text": "+ Nhập đúng định dạng kiểu dữ liệu",
+      "style": "Normal",
+      "runs": 14
+    }
+  ],
+  "table_count": 3,
+  "tables": [
+    {
+      "index": 0,
+      "row_count": 7,
+      "column_count": 2,
+      "header": [
+        "Tên chức năng",
+        "Sửa dữ liệu Tuyến đường bộ"
+      ],
+      "sample_rows": [
+        [
+          "Tên chức năng",
+          "Sửa dữ liệu Tuyến đường bộ"
+        ],
+        [
+          "Mô tả",
+          "Cán bộ quản trị dữ liệu có thể Sửa dữ liệu tuyến đường bộ"
+        ],
+        [
+          "Tác nhân",
+          "Cán bộ quản trị dữ liệu"
+        ],
+        [
+          "Điều kiện trước",
+          "Cán bộ quản trị dữ liệu truy cập thành công vào hệ thống"
+        ],
+        [
+          "Điều kiện sau",
+          "- Trường hợp thành công: Cán bộ quản trị dữ liệu có thể Sửa dữ liệu Tuyến đường bộ thành công \n- Trường hợp thất bại: Hệ thống thông báo thất bại"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "row_count": 5,
+      "column_count": 3,
+      "header": [
+        "Hành động của tác nhân",
+        "Phản ứng của hệ thống",
+        "Dữ liệu liên quan (C/R/U/D)"
+      ],
+      "sample_rows": [
+        [
+          "Hành động của tác nhân",
+          "Phản ứng của hệ thống",
+          "Dữ liệu liên quan (C/R/U/D)"
+        ],
+        [
+          "Cán bộ quản trị dữ liệu xem dữ liệu Tuyến đường bộ",
+          "Hệ thống hiển thị màn hình dữ liệu Tuyến đường bộ",
+          "R"
+        ],
+        [
+          "Cán bộ quản trị dữ liệu sửa dữ liệu Tuyến đường bộ",
+          "Trường hợp dữ liệu kiểm tra hợp lệ: Hệ thống lưu thông tin chỉnh sửa thành công và hiển thị thông báo",
+          "U"
+        ],
+        [
+          "Cán bộ quản trị dữ liệu xem thông báo thành công",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "row_count": 3,
+      "column_count": 3,
+      "header": [
+        "Hành động của tác nhân",
+        "Phản ứng của hệ thống",
+        "Dữ liệu liên quan (C/R/U/D)"
+      ],
+      "sample_rows": [
+        [
+          "Hành động của tác nhân",
+          "Phản ứng của hệ thống",
+          "Dữ liệu liên quan (C/R/U/D)"
+        ],
+        [
+          "1.Cán bộ quản trị dữ liệu sửa dữ liệu Tuyến đường bộ",
+          "2. Trường hợp dữ liệu kiểm tra không hợp lệ: Hệ thống thông báo lý do thất bại",
+          "R"
+        ],
+        [
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "page_width": 7772400,
+      "page_height": 10058400,
+      "top_margin": 914400,
+      "bottom_margin": 914400,
+      "left_margin": 914400,
+      "right_margin": 914400
+    }
+  ],
+  "package": {
+    "has_document_xml": true,
+    "media": [
+      "word/media/image1.png"
+    ],
+    "relationships": [
+      "_rels/.rels",
+      "word/_rels/document.xml.rels"
+    ],
+    "body_children": [
+      "p",
+      "p",
+      "tbl",
+      "p",
+      "p",
+      "p",
+      "tbl",
+      "p",
+      "tbl",
+      "p",
+      "p",
+      "p",
+      "p",
+      "p",
+      "sectPr"
+    ],
+    "element_counts": {
+      "avLst": 1,
+      "b": 98,
+      "bCs": 19,
+      "blip": 1,
+      "blipFill": 1,
+      "body": 1,
+      "bookmarkEnd": 1,
+      "bookmarkStart": 1,
+      "bottom": 9,
+      "cNvGraphicFramePr": 1,
+      "cNvPicPr": 1,
+      "cNvPr": 1,
+      "color": 386,
+      "cols": 1,
+      "docGrid": 1,
+      "docPr": 1,
+      "document": 1,
+      "drawing": 1,
+      "effectExtent": 1,
+      "ext": 2,
+      "extLst": 1,
+      "extent": 1,
+      "fillRect": 1,
+      "graphic": 1,
+      "graphicData": 1,
+      "graphicFrameLocks": 1,
+      "gridCol": 8,
+      "i": 1,
+      "ilvl": 14,
+      "ind": 31,
+      "inline": 1,
+      "insideH": 3,
+      "insideV": 3,
+      "jc": 25,
+      "lang": 98,
+      "lastRenderedPageBreak": 1,
+      "left": 10,
+      "ln": 1,
+      "noFill": 2,
+      "noProof": 1,
+      "numId": 14,
+      "numPr": 14,
+      "nvPicPr": 1,
+      "off": 1,
+      "p": 51,
+      "pPr": 50,
+      "pStyle": 21,
+      "pgMar": 1,
+      "pgSz": 1,
+      "pic": 1,
+      "picLocks": 1,
+      "proofErr": 484,
+      "prstGeom": 1,
+      "r": 490,
+      "rFonts": 91,
+      "rPr": 528,
+      "right": 10,
+      "sectPr": 1,
+      "shd": 19,
+      "snapToGrid": 2,
+      "spPr": 1,
+      "spacing": 2,
+      "srcRect": 1,
+      "stretch": 1,
+      "sz": 91,
+      "szCs": 412,
+      "t": 489,
+      "tbl": 3,
+      "tblBorders": 3,
+      "tblGrid": 3,
+      "tblInd": 2,
+      "tblLook": 3,
+      "tblPr": 3,
+      "tblW": 3,
+      "tc": 38,
+      "tcBorders": 14,
+      "tcPr": 38,
+      "tcW": 38,
+      "top": 5,
+      "tr": 15,
+      "trHeight": 9,
+      "trPr": 9,
+      "useLocalDpi": 1,
+      "vAlign": 14,
+      "widowControl": 1,
+      "xfrm": 1
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Xem danh sách báo cáo hàng ngày",
+  "section_number": "4.1.2.3.2",
+  "purpose": "Cho phép người dùng xem danh sách báo cáo hàng ngày và xuất file Excel.",
+  "actor": "Người sử dụng",
+  "preconditions": "Người dùng có quyền truy cập chức năng Báo cáo hàng ngày.",
+  "postconditions": "Trường hợp thành công: hệ thống hiển thị danh sách báo cáo hoặc tải file Excel. Trường hợp không thành công: hệ thống hiển thị thông báo tương ứng.",
+  "lanes": {
+    "user": "Người sử dụng",
+    "system": "Hệ thống"
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "shape": "oval",
+      "label": "Bắt đầu",
+      "lane": "user"
+    },
+    {
+      "id": "step1",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "1. Chọn Báo cáo hàng ngày",
+      "lane": "user"
+    },
+    {
+      "id": "step2",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "2. Hiển thị màn hình Báo cáo hàng ngày",
+      "lane": "system"
+    },
+    {
+      "id": "step3",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "3. Chọn tiêu chí và nhấn Tìm kiếm",
+      "lane": "user"
+    },
+    {
+      "id": "step4",
+      "type": "process",
+      "shape": "rectangle",
+      "label": "4. Hiển thị danh sách và cho phép xuất Excel",
+      "lane": "system"
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "shape": "oval",
+      "label": "Kết thúc",
+      "lane": "system"
+    }
+  ],
+  "edges": [
+    {
+      "from": "start",
+      "to": "step1"
+    },
+    {
+      "from": "step1",
+      "to": "step2"
+    },
+    {
+      "from": "step2",
+      "to": "step3"
+    },
+    {
+      "from": "step3",
+      "to": "step4"
+    },
+    {
+      "from": "step4",
+      "to": "end"
+    }
+  ],
+  "basic_flow": [
+    {
+      "actor": "Người dùng chọn Báo cáo hàng ngày.",
+      "system": "Hệ thống hiển thị màn hình Báo cáo hàng ngày.",
+      "crud": "R"
+    },
+    {
+      "actor": "Người dùng chọn tiêu chí và nhấn Tìm kiếm.",
+      "system": "Hệ thống hiển thị danh sách và cho phép xuất Excel.",
+      "crud": "R"
+    }
+  ],
+  "alternative_flow": [
+    {
+      "actor": "1. Người dùng chọn tiêu chí và nhấn Tìm kiếm.",
+      "system": "2. Trường hợp không có dữ liệu: Hệ thống hiển thị thông báo tương ứng.",
+      "crud": "R"
+    }
+  ],
+  "validation_rules": [
+    "Nếu không tìm thấy dữ liệu thì hiển thị thông báo tương ứng."
+  ],
+  "business_rules": [
+    "Dữ liệu xuất Excel theo tiêu chí tìm kiếm hiện tại."
+  ],
+  "error_scenarios": [
+    "Không kết nối được với máy chủ."
+  ],
+  "notes": []
+}
